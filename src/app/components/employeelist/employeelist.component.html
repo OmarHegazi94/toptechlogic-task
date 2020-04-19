@@ -15,37 +15,15 @@
         </thead>
 
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>image</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Password</td>
-                <td>Phone</td>
-                <td>
-                    <button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0 mr-2">Edit</button>
-                    <button mdbBtn color="danger" size="sm" mdbWavesEffect type="button" class="m-0">Delete</button>
+            <tr *ngFor="let employee of Employees">
+                <th scope="row">{{ employee.ID }}</th>
+                <td class="w-25">
+                    <img src="{{ employee.Image }}" class="empImage" alt="">
                 </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>image</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Password</td>
-                <td>Phone</td>
-                <td>
-                    <button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0 mr-2">Edit</button>
-                    <button mdbBtn color="danger" size="sm" mdbWavesEffect type="button" class="m-0">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>image</td>
-                <td>Name</td>
-                <td>Email</td>
-                <td>Password</td>
-                <td>Phone</td>
+                <td>{{ employee.Name }}</td>
+                <td>{{ employee.Email }}</td>
+                <td>{{ employee.Password }}</td>
+                <td>{{ employee.Phone }}</td>
                 <td>
                     <button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0 mr-2">Edit</button>
                     <button mdbBtn color="danger" size="sm" mdbWavesEffect type="button" class="m-0">Delete</button>
