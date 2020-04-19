@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Employee } from 'src/app/_models/employee';
 
 @Component({
   selector: 'app-employeelist',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeelistComponent implements OnInit {
 
-  constructor() { }
+  Employees: Employee[];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    
   }
 
 }
