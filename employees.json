@@ -5,7 +5,7 @@
       "Email": "Omar.Hegazy@gmail.com",
       "Password": "10203040",
       "Phone": "01068684376",
-      "Image": "../assets/images/1.png"
+      "Image": "./assets/images/1.png"
     },
     {
       "ID": 2,
@@ -13,7 +13,7 @@
       "Email": "KOKO@gmail.com",
       "Password": "10203040",
       "Phone": "01089784526",
-      "Image": "../assets/images/2.png"
+      "Image": "./assets/images/2.png"
     },
     {
       "ID": 3,
@@ -21,7 +21,7 @@
       "Email": "LOLO@gmail.com",
       "Password": "10203040",
       "Phone": "01012452186",
-      "Image": "../assets/images/3.png"
+      "Image": "./assets/images/3.png"
     }
   ]
 }

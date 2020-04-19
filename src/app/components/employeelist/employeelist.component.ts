@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Employee } from 'src/app/_models/employee';
+import { EmployeeService } from 'src/app/_services/employee.service';
 
 @Component({
   selector: 'app-employeelist',
@@ -11,10 +12,14 @@ export class EmployeelistComponent implements OnInit {
 
   Employees: Employee[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private empolyeeService: EmployeeService) { }
 
   ngOnInit(): void {
-    
+    this.empolyeeService.getAllEmployess().subscribe(
+      (data) => {
+        console.log(data);
+      }
+    );
   }
 
 }
