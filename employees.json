@@ -1,6 +1,7 @@
 {
-  "employees": [{
-      "ID": 1,
+  "employees": [
+    {
+      "id": 1,
       "Name": "Omar Hegazi",
       "Email": "Omar.Hegazy@gmail.com",
       "Password": "10203040",
@@ -8,15 +9,7 @@
       "Image": "./assets/images/1.png"
     },
     {
-      "ID": 2,
-      "Name": "KOKO",
-      "Email": "KOKO@gmail.com",
-      "Password": "10203040",
-      "Phone": "01089784526",
-      "Image": "./assets/images/2.png"
-    },
-    {
-      "ID": 3,
+      "id": 3,
       "Name": "LOLO",
       "Email": "LOLO@gmail.com",
       "Password": "10203040",

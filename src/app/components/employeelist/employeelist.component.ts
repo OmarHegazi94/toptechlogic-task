@@ -13,13 +13,30 @@ export class EmployeelistComponent implements OnInit {
 
   Employees: Employee[];
 
-  constructor(private http: HttpClient, private empolyeeService: EmployeeService, private router: Router) { }
+  constructor(private empolyeeService: EmployeeService, private router: Router) { }
 
   ngOnInit(): void {
     this.empolyeeService.getAllEmployess().subscribe(
       (data) => {
         // console.log(data);
         this.Employees = data;
+      }, error => {
+        console.log(error)
+      }
+    );
+  }
+
+  deleteEmployee(employeeID: number) :void {
+    this.empolyeeService.deleteEmployee(employeeID).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
+    this.empolyeeService.getAllEmployess().subscribe(
+      (data) => {
+        this.Employees = data;
+      }, error => {
+        console.log(error)
       }
     );
   }

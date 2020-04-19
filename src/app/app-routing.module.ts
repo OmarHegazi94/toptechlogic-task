@@ -8,7 +8,7 @@ import { EmployeeeditComponent } from './components/employeeedit/employeeedit.co
 const routes: Routes = [
   { path: "", component: EmployeelistComponent, pathMatch: "full" },
   { path: "add", component: EmployeeaddComponent, pathMatch: "full" },
-  { path: "edit", component: EmployeeeditComponent, pathMatch: "full" }
+  { path: "edit/:id", component: EmployeeeditComponent, pathMatch: "full" }
 ];
 
 @NgModule({

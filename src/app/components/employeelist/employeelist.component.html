@@ -15,7 +15,7 @@
 
         <tbody>
             <tr *ngFor="let employee of Employees">
-                <th scope="row">{{ employee.ID }}</th>
+                <th scope="row">{{ employee.id }}</th>
                 <td class="w-25">
                     <img src="{{ employee.Image }}" class="empImage" alt="">
                 </td>
@@ -24,8 +24,8 @@
                 <td>{{ employee.Password }}</td>
                 <td>{{ employee.Phone }}</td>
                 <td>
-                    <button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0 mr-2">Edit</button>
-                    <button mdbBtn color="danger" size="sm" mdbWavesEffect type="button" class="m-0">Delete</button>
+                    <button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0 mr-2" [routerLink]="['/edit/' + employee.id]">Edit</button>
+                    <button mdbBtn color="danger" size="sm" mdbWavesEffect type="button" class="m-0" (click)="deleteEmployee(employee.id)">Delete</button>
                 </td>
             </tr>
         </tbody>
