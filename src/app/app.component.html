@@ -1,3 +1,26 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" [routerLink]="['/']">Top Tech Logic</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/']" >List<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ml-2" routerLinkActive="active">
+              <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/add']" >Add Employee</a>
+          </li>
+      </ul>
+      <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
 <div class="container py-5 my-5">
-  <app-employeelist></app-employeelist>
+  <!--Navbar-->
+<!--/.Navbar-->
+  <router-outlet></router-outlet>
 </div>
