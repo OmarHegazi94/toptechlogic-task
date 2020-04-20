@@ -4,7 +4,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Image</th>
+                <!-- <th>Image</th> -->
                 <th>Name</th>
                 <th>Email</th>
                 <th>Password</th>
@@ -16,9 +16,9 @@
         <tbody>
             <tr *ngFor="let employee of Employees">
                 <th scope="row">{{ employee.id }}</th>
-                <td class="w-25">
+                <!-- <td class="w-25">
                     <img src="{{ employee.Image }}" class="empImage" alt="">
-                </td>
+                </td> -->
                 <td>{{ employee.Name }}</td>
                 <td>{{ employee.Email }}</td>
                 <td>{{ employee.Password }}</td>

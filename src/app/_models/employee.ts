@@ -5,6 +5,6 @@ export class Employee {
         public Email: string,
         public Password: string,
         public Phone: number,
-        public Image: string
+        // public Image: File
     ){}
 }
