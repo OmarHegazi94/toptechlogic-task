@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col">
-            <input type="text" formControlName="Name" class="form-control" pattern="^[a-zA-Z]+$" placeholder="Name">
+            <input type="text" formControlName="Name" class="form-control" pattern="^[a-zA-Z_ ]+$" placeholder="Name">
 
             <div class="alert alert-danger p-1 mt-3"
             *ngIf="addEmployeeForm.controls.Name?.touched && addEmployeeForm.controls.Name.errors?.required">

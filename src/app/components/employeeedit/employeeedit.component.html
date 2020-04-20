@@ -1,1 +1,87 @@
-<p>employeeedit works!</p>
+
+<div *ngIf="messageSuccess" class="alert alert-success" role="alert">
+    Success! you will navigate back to All Employees in 2 seconds
+</div>
+
+<div *ngIf="generalFormError" class="alert alert-danger" role="alert">
+    One or more fields are required
+</div>
+
+<!-- Default form register -->
+<form class="text-center border border-light p-5" [formGroup]="editEmployeeForm" (ngSubmit)="saveEmployee()" enctype="multipart/form-data">
+
+    <p class="h4 mb-4">Edit an Employee</p>
+
+    <div class="form-row mb-4">
+        <div class="col">
+            <input type="text" formControlName="id" [(ngModel)]="Employee.id" class="form-control disabled" disabled pattern="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$" placeholder="ID">
+            
+            <!-- <div class="alert alert-danger p-1 mt-3"
+            *ngIf="editEmployeeForm.controls.id?.touched && editEmployeeForm.controls.id.errors?.required">
+                ID is Required
+            </div>
+
+            <div class="alert alert-danger p-1 mt-3"
+            *ngIf="editEmployeeForm.controls.id?.touched && editEmployeeForm.controls.id.errors?.pattern?.requiredPattern">
+                ID must be a number
+            </div> -->
+        </div>
+        <div class="col">
+            <input type="text" formControlName="Name" [(ngModel)]="Employee.Name" class="form-control" pattern="^[a-zA-Z_ ]+$" placeholder="Name">
+
+            <div class="alert alert-danger p-1 mt-3"
+            *ngIf="editEmployeeForm.controls.Name?.touched && editEmployeeForm.controls.Name.errors?.required">
+                Name is Required
+            </div>
+
+            <div class="alert alert-danger p-1 mt-3"
+            *ngIf="editEmployeeForm.controls.Name?.touched && editEmployeeForm.controls.Name.errors?.pattern?.requiredPattern">
+                Only Characters are allowed
+            </div>
+        </div>
+    </div>
+
+    <!-- E-mail -->
+    <input type="email" formControlName="Email" [(ngModel)]="Employee.Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control mb-4" placeholder="E-mail">
+
+    <div class="alert alert-danger p-1 mt-3"
+    *ngIf="editEmployeeForm.controls.Email?.touched && editEmployeeForm.controls.Email.errors?.required">
+        Email is Required
+    </div>
+
+    <div class="alert alert-danger p-1 mt-3"
+    *ngIf="editEmployeeForm.controls.Email?.touched && editEmployeeForm.controls.Email.errors?.pattern?.requiredPattern">
+        please add a valid Email Address
+    </div>
+
+    <!-- Password -->
+    <input type="password" formControlName="Password" [(ngModel)]="Employee.Password" class="form-control mb-4" placeholder="Password">
+
+    <div class="alert alert-danger p-1 mt-3"
+    *ngIf="editEmployeeForm.controls.Password?.touched && editEmployeeForm.controls.Password.errors?.required">
+        Password is Required
+    </div>
+
+    <!-- Phone number -->
+    <input type="text" formControlName="Phone" [(ngModel)]="Employee.Phone" class="form-control mb-4" pattern="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$" placeholder="Phone number">
+
+    <div class="alert alert-danger p-1 mt-3"
+    *ngIf="editEmployeeForm.controls.Phone?.touched && editEmployeeForm.controls.Phone.errors?.required">
+        Phone Number is Required
+    </div>
+
+    <div class="alert alert-danger p-1 mt-3"
+    *ngIf="editEmployeeForm.controls.Phone?.touched && editEmployeeForm.controls.Phone.errors?.pattern?.requiredPattern">
+        Phone Number must be a number
+    </div>
+<!-- 
+    <div mdbBtn color="primary" size="sm" class="waves-light mb-4 float-left" mdbWavesEffect>
+        <span>Choose file</span>
+        <input type="file" mdbFileSelect (change)="onFileSelected($event)" accept="image/*">
+    </div> -->
+
+    <!-- Sign up button -->
+    <button mdbBtn color="indigo" block="true" class="my-4" type="submit">Save</button>
+
+</form>
+<!-- Default form register -->

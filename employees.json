@@ -1,48 +1,18 @@
 {
   "employees": [
     {
-      "id": 1,
-      "Name": "Omar Hegazi",
-      "Email": "Omar.Hegazy@gmail.com",
-      "Password": "10203040",
-      "Phone": "01068684376",
-      "Image": "./assets/images/1.png"
-    },
-    {
-      "id": 3,
-      "Name": "LOLO",
-      "Email": "LOLO@gmail.com",
-      "Password": "10203040",
-      "Phone": "01012452186",
-      "Image": "./assets/images/3.png"
-    },
-    {
-      "id": "2",
-      "Name": "koko",
+      "id": "222",
+      "Name": "KOKO WAWA",
       "Email": "koko@gmail.com",
-      "Password": "7867876",
-      "Phone": "89678689"
+      "Password": "5555",
+      "Phone": "343432423"
     },
     {
-      "id": "33",
-      "Name": "few",
-      "Email": "fewwe@few.com",
-      "Password": "dwqf",
-      "Phone": "7897"
-    },
-    {
-      "id": "23",
-      "Name": "fefe",
-      "Email": "fef@fe.com",
-      "Password": "fefe",
-      "Phone": "4324"
-    },
-    {
-      "id": "231",
-      "Name": "dwdw",
-      "Email": "dwdw@fefe.com",
-      "Password": "dwfe",
-      "Phone": "343432"
+      "id": "1",
+      "Name": "Mero Hegazi",
+      "Email": "mero@gmail.com",
+      "Password": "fkokok",
+      "Phone": "2312332123"
     }
   ]
 }
