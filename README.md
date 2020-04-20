@@ -1,5 +1,6 @@
 # Toptechlogictask
-Instruction for running this project :
+
+## Instruction for running this project :
 
 1- download or clone the repo
 2- npm install
@@ -8,7 +9,7 @@ Instruction for running this project :
 5- live updates can been seen in employees.json file
 
 
-Important Notes:
+## Important Notes:
 
 update employee is not working due to open issue in json-server number 755 
 https://github.com/typicode/json-server/issues/755
